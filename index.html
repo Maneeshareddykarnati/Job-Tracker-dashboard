@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Job Application Tracker Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div>
+      <h1>Job Application Tracker</h1>
+      <p>Track job applications, interview status, and follow-ups in one place.</p>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="stats">
+      <div class="card">
+        <h2 id="totalApplications">0</h2>
+        <p>Total Applications</p>
+      </div>
+
+      <div class="card">
+        <h2 id="interviewCount">0</h2>
+        <p>Interviews</p>
+      </div>
+
+      <div class="card">
+        <h2 id="offerCount">0</h2>
+        <p>Offers</p>
+      </div>
+
+      <div class="card">
+        <h2 id="rejectedCount">0</h2>
+        <p>Rejected</p>
+      </div>
+    </section>
+
+    <section class="form-section">
+      <h2>Add New Job Application</h2>
+
+      <form id="jobForm">
+        <input type="text" id="company" placeholder="Company Name" required />
+        <input type="text" id="role" placeholder="Job Role" required />
+
+        <select id="status" required>
+          <option value="">Select Status</option>
+          <option value="Applied">Applied</option>
+          <option value="Interview">Interview</option>
+          <option value="Offer">Offer</option>
+          <option value="Rejected">Rejected</option>
+        </select>
+
+        <input type="date" id="date" required />
+        <button type="submit">Add Application</button>
+      </form>
+    </section>
+
+    <section class="filter-section">
+      <input type="text" id="searchInput" placeholder="Search by company or role..." />
+
+      <select id="filterStatus">
+        <option value="All">All Status</option>
+        <option value="Applied">Applied</option>
+        <option value="Interview">Interview</option>
+        <option value="Offer">Offer</option>
+        <option value="Rejected">Rejected</option>
+      </select>
+    </section>
+
+    <section class="table-section">
+      <h2>Applications</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Company</th>
+            <th>Role</th>
+            <th>Status</th>
+            <th>Date Applied</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+
+        <tbody id="jobTableBody">
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Created by Naveen Reddy Ailuri | Java Full Stack Developer</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
